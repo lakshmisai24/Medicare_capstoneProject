@@ -1,0 +1,37 @@
+l<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Register</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+crossorigin="anonymous">
+</head>
+<script>
+function navToLoginPage()
+{
+    location.href = "http://localhost:8080/LoginAfterRegister.html";
+
+}
+
+</script>
+<body>
+<div class="container my-2">
+<h1>User Management System</h1>
+
+<form action="#" th:action="@{/savecustomer}" th:object="${customers}" method="post">
+           User Name<input type="text" field="*{firstname1}" name="firstname1"
+                  placeholder="User Name" class="form-control mb-4 col-4">
+                        <br>                      
+           Email<input type="text" field="*{email1}" name="email1" 
+                  placeholder="Email" class="form-control mb-4 col-4">
+                  <br>                              
+            Password<input type="text" field="*{lastname1}" name="lastname1" 
+                   placeholder="Password" class="form-control mb-4 col-4">      
+                                    <br><br>           
+         <button type="submit" class="btn btn-info col-2">Save Customers</button>
+</form>
+</div>
+
+</body>
+</html>
